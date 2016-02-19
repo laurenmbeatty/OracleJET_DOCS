@@ -1,0 +1,22 @@
+<h1>Please Login</h1>
+
+<div id="form-container" class="oj-form">
+    <label for="input" class="oj-label-inline">Username:</label>
+    <input id="input" placeholder="Username" data-bind="ojComponent: {component: 'ojInputText',
+    required: isRequired, 
+    help: {definition: helpDef(), source:helpSource()}}"><br/>
+
+    <label for="password" class="oj-label-inline">Password:</label>
+    <input type="password" id="password" placehoder="Password" data-bind="ojComponent: {component: 'ojInputPassword',
+    required: isRequired, 
+    help: {definition: helpDef(), source:helpSource()}}"><br/>
+
+    <button id= "login"
+            data-bind=" click: buttonClick,ojComponent: { component: 'ojButton',                                  
+                                   checked: $root.router.stateId(),
+                                   focusManagement: 'none',
+                                   label: 'Login'}">
+
+    </button>
+
+</div>
